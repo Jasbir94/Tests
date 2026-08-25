@@ -1,0 +1,75 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  name      String?
+  createdAt DateTime  @default(now())
+  tests     Test[]
+  attempts  Attempt[]
+}
+
+model Test {
+  id             String       @id @default(cuid())
+  userId         String
+  user           User         @relation(fields: [userId], references: [id])
+  title          String
+  pdfUrl         String
+  duration       Int          // in minutes
+  totalQuestions Int
+  createdAt      DateTime     @default(now())
+  answerKeys     AnswerKey[]
+  attempts       Attempt[]
+}
+
+model AnswerKey {
+  id             String @id @default(cuid())
+  testId         String
+  test           Test   @relation(fields: [testId], references: [id], onDelete: Cascade)
+  questionNumber Int
+  questionType   String // "MCQ", "MSQ", "NAT"
+  correctOption  String
+  marks          Float  // 1 or 2
+
+  @@unique([testId, questionNumber])
+}
+
+model Attempt {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id])
+  testId      String
+  test        Test      @relation(fields: [testId], references: [id], onDelete: Cascade)
+  startedAt   DateTime  @default(now())
+  submittedAt DateTime?
+  score       Float?
+  correct     Int?
+  wrong       Int?
+  skipped     Int?
+  timeTaken   Int?      // in seconds
+  answers     Answer[]
+}
+
+model Answer {
+  id             String  @id @default(cuid())
+  attemptId      String
+  attempt        Attempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  questionNumber Int
+  selectedOption String?
+  correctOption  String
+  marks          Float
+
+  @@unique([attemptId, questionNumber])
+}
