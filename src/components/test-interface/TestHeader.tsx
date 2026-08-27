@@ -53,37 +53,47 @@ export function TestHeader() {
   const progressPercent = totalQuestions > 0 ? (answeredCount / totalQuestions) * 100 : 0;
 
   return (
-    <div className="h-16 border-b flex items-center justify-between px-4 sm:px-6 shrink-0 bg-background shadow-sm relative z-20">
-      {/* Logo & Test Name */}
-      <div className="flex items-center gap-4">
+    <div className="h-16 border-b flex items-center justify-between px-3 sm:px-6 shrink-0 bg-white shadow-sm relative z-20">
+      {/* Left side: Menu, Logo, Test Name */}
+      <div className="flex items-center gap-2 sm:gap-4">
+        {/* Mobile Hamburger */}
+        <button className="md:hidden p-1.5 -ml-1.5 text-slate-600 rounded-md hover:bg-slate-100">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center text-primary-foreground font-bold">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary rounded-md flex items-center justify-center text-primary-foreground font-bold text-sm sm:text-base">
             M
           </div>
-          <span className="font-bold text-lg tracking-tight hidden sm:inline-block">MockPDF</span>
+          <span className="font-bold text-base sm:text-lg tracking-tight hidden md:inline-block">MockPDF</span>
         </div>
-        <div className="h-6 w-px bg-border mx-2 hidden sm:block"></div>
-        <span className="font-medium text-sm sm:text-base truncate max-w-[200px] sm:max-w-xs">
+        <div className="h-6 w-px bg-border mx-1 sm:mx-2 hidden sm:block"></div>
+        <span className="font-medium text-sm sm:text-base truncate max-w-[120px] sm:max-w-xs hidden sm:block">
           {testName || "Untitled Test"}
         </span>
       </div>
 
-      {/* Progress Center */}
-      <div className="hidden md:flex items-center gap-4">
+      {/* Center: Question Progress (Mobile focused) */}
+      <div className="flex md:hidden items-center text-[15px] font-bold text-slate-800 absolute left-1/2 -translate-x-1/2">
+        {currentQuestion} / {totalQuestions}
+      </div>
+
+      {/* Center: Desktop Progress Bar */}
+      <div className="hidden md:flex items-center gap-4 absolute left-1/2 -translate-x-1/2">
         <span className="text-sm font-medium">Question {currentQuestion} of {totalQuestions}</span>
-        <div className="w-32 h-2 bg-muted rounded-full overflow-hidden">
+        <div className="w-32 h-2 bg-slate-100 rounded-full overflow-hidden">
           <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progressPercent}%` }}></div>
         </div>
         <span className="text-xs text-muted-foreground">{Math.round(progressPercent)}%</span>
       </div>
 
-      {/* Right Controls */}
-      <div className="flex items-center gap-3 sm:gap-6">
-        <div className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${isLowTime ? 'bg-destructive/10 text-destructive font-bold' : 'bg-muted/50'}`}>
+      {/* Right side: Timer & Submit */}
+      <div className="flex items-center gap-2 sm:gap-6">
+        <div className={`flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 rounded-md ${isLowTime ? 'bg-destructive/10 text-destructive font-bold' : 'text-slate-700'}`}>
           <Clock className="w-4 h-4" />
           <div className="flex flex-col">
-            <span className="text-[10px] leading-none uppercase text-muted-foreground font-semibold mb-0.5">Time Remaining</span>
-            <span className="text-lg leading-none font-mono tabular-nums">{formattedTime}</span>
+            <span className="hidden sm:block text-[10px] leading-none uppercase text-muted-foreground font-semibold mb-0.5">Time Remaining</span>
+            <span className="text-[15px] sm:text-lg leading-none font-mono tabular-nums font-semibold">{formattedTime}</span>
           </div>
         </div>
 
