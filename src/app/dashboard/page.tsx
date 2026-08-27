@@ -26,7 +26,7 @@ export default async function DashboardPage() {
     }),
     prisma.attempt.findMany({
       where: { userId, submittedAt: { not: null } },
-      select: { score: true, timeSpent: true },
+      select: { score: true, timeTaken: true },
     }),
   ]);
 
@@ -35,7 +35,7 @@ export default async function DashboardPage() {
   const avgScore = scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   const bestScore = scores.length > 0 ? Math.round(Math.max(...scores)) : 0;
   
-  const totalTimeSeconds = attempts.reduce((acc, curr) => acc + (curr.timeSpent || 0), 0);
+  const totalTimeSeconds = attempts.reduce((acc, curr) => acc + (curr.timeTaken || 0), 0);
   const hoursPracticed = Math.floor(totalTimeSeconds / 3600);
   const minutesPracticed = Math.floor((totalTimeSeconds % 3600) / 60);
 

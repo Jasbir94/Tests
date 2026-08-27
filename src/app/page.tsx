@@ -64,28 +64,28 @@ export default async function Home() {
             } />
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-4 mt-8">
-                <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="#how-it-works">How it works</Link></SheetClose>
-                <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="#features">Features</Link></SheetClose>
-                <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="#pricing">Pricing</Link></SheetClose>
+                <SheetClose render={<Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="#how-it-works">How it works</Link>} />
+                <SheetClose render={<Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="#features">Features</Link>} />
+                <SheetClose render={<Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="#pricing">Pricing</Link>} />
                 <hr className="my-2 border-slate-100" />
-                <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="/demo">Try Demo</Link></SheetClose>
+                <SheetClose render={<Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="/demo">Try Demo</Link>} />
                 {session?.user ? (
                   <>
-                    <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="/dashboard">Dashboard</Link></SheetClose>
-                    <SheetClose asChild>
+                    <SheetClose render={<Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="/dashboard">Dashboard</Link>} />
+                    <SheetClose render={
                       <Link href="/dashboard/create" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white shadow-sm rounded-lg mt-4 w-full h-12 text-lg" })}>
                         Create Mock Test
                       </Link>
-                    </SheetClose>
+                    } />
                   </>
                 ) : (
                   <>
-                    <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="/login">Login</Link></SheetClose>
-                    <SheetClose asChild>
+                    <SheetClose render={<Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="/login">Login</Link>} />
+                    <SheetClose render={
                       <Link href="/login" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white shadow-sm rounded-lg mt-4 w-full h-12 text-lg" })}>
                         Get Started
                       </Link>
-                    </SheetClose>
+                    } />
                   </>
                 )}
               </nav>

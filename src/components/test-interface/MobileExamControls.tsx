@@ -63,7 +63,7 @@ export function MobileExamControls() {
   // Palette stats
   const answeredCount = Object.keys(answers).length;
   const markedCount = Object.values(markedForReview).filter(Boolean).length;
-  const notVisitedCount = totalQuestions - visitedQuestions.length;
+  const notVisitedCount = totalQuestions - Object.keys(visitedQuestions).length;
 
   return (
     <div className="absolute bottom-0 left-0 w-full z-20 flex flex-col pointer-events-none">
@@ -131,14 +131,14 @@ export function MobileExamControls() {
           </Button>
 
           <Sheet open={isPaletteOpen} onOpenChange={setIsPaletteOpen}>
-            <SheetTrigger asChild>
+            <SheetTrigger render={
               <Button variant="outline" className="h-12 w-12 rounded-full border-slate-200 shadow-sm p-0 flex-shrink-0 relative">
                 <Palette className="w-5 h-5 text-slate-700" />
                 {markedCount > 0 && (
                   <div className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-orange-500 rounded-full border-2 border-white"></div>
                 )}
               </Button>
-            </SheetTrigger>
+            } />
             <SheetContent side="bottom" className="h-[85vh] rounded-t-3xl p-0 flex flex-col">
               <div className="flex items-center justify-between p-5 border-b">
                 <h3 className="font-bold text-xl">Question Palette</h3>
@@ -158,7 +158,7 @@ export function MobileExamControls() {
                   {Array.from({ length: totalQuestions }, (_, i) => i + 1).map((qNum) => {
                     const isAns = !!answers[qNum];
                     const isMrk = !!markedForReview[qNum];
-                    const isVis = visitedQuestions.includes(qNum);
+                    const isVis = !!visitedQuestions[qNum];
                     const isCur = qNum === currentQuestion;
 
                     let bgClass = "bg-slate-200 text-slate-600 font-medium";
