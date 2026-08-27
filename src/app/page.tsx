@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { auth } from "@/auth";
 import { buttonVariants } from "@/components/ui/button";
 import { 
   ArrowRight, 
@@ -14,7 +15,9 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth();
+
   return (
     <div className="flex flex-col min-h-[100dvh] w-full overflow-x-hidden font-sans bg-white">
       {/* Header */}
@@ -35,10 +38,21 @@ export default function Home() {
           
           <div className="hidden md:flex items-center gap-5">
             <Link className="text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors border border-slate-200 px-4 py-2 rounded-lg hover:bg-slate-50" href="/demo">Try Demo</Link>
-            <Link className="text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors" href="/login">Login</Link>
-            <Link href="/dashboard" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white rounded-lg px-5 h-[42px] text-[15px]" })}>
-              Create Mock Test
-            </Link>
+            {session?.user ? (
+              <>
+                <Link className="text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors" href="/dashboard">Dashboard</Link>
+                <Link href="/dashboard/create" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white rounded-lg px-5 h-[42px] text-[15px]" })}>
+                  Create Mock Test
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link className="text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors" href="/login">Login</Link>
+                <Link href="/login" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white rounded-lg px-5 h-[42px] text-[15px]" })}>
+                  Get Started
+                </Link>
+              </>
+            )}
           </div>
 
           <Sheet>
@@ -55,10 +69,21 @@ export default function Home() {
                 <Link className="text-lg font-semibold" href="#pricing">Pricing</Link>
                 <hr className="my-4" />
                 <Link className="text-lg font-semibold" href="/demo">Try Demo</Link>
-                <Link className="text-lg font-semibold" href="/login">Login</Link>
-                <Link href="/dashboard" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white shadow-sm rounded-lg mt-4 w-full" })}>
-                  Create Mock Test
-                </Link>
+                {session?.user ? (
+                  <>
+                    <Link className="text-lg font-semibold" href="/dashboard">Dashboard</Link>
+                    <Link href="/dashboard/create" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white shadow-sm rounded-lg mt-4 w-full" })}>
+                      Create Mock Test
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <Link className="text-lg font-semibold" href="/login">Login</Link>
+                    <Link href="/login" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white shadow-sm rounded-lg mt-4 w-full" })}>
+                      Get Started
+                    </Link>
+                  </>
+                )}
               </nav>
             </SheetContent>
           </Sheet>
