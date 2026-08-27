@@ -3,8 +3,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 import crypto from 'crypto';
+import { auth } from '@/auth';
 import prisma from '@/lib/prisma';
-import { getOrCreateMockUser } from '@/lib/user';
 
 async function savePdfFile(file: File): Promise<string> {
   const fileExt = file.name.split('.').pop() || 'pdf';
@@ -49,13 +49,15 @@ export async function createTest(formData: FormData) {
     // Save PDF (gracefully handles Vercel read-only filesystem)
     const pdfUrl = await savePdfFile(file);
 
-    // Get or create the mock user
-    const user = await getOrCreateMockUser();
+    // Get authenticated user
+    const session = await auth();
+    if (!session?.user?.id) throw new Error('Not authenticated');
+    const userId = session.user.id;
 
     // Create Test + AnswerKeys in DB
     const test = await prisma.test.create({
       data: {
-        userId: user.id,
+        userId: userId,
         title: testData.testName,
         pdfUrl: pdfUrl,
         duration: testData.duration,

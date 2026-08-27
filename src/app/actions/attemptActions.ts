@@ -1,15 +1,16 @@
 "use server";
 
+import { auth } from '@/auth';
 import prisma from '@/lib/prisma';
-import { getOrCreateMockUser } from '@/lib/user';
 
 export async function startAttempt(testId: string) {
   try {
-    const user = await getOrCreateMockUser();
-    
+    const session = await auth();
+    if (!session?.user?.id) throw new Error('Not authenticated');
+
     const attempt = await prisma.attempt.create({
       data: {
-        userId: user.id,
+        userId: session.user.id,
         testId: testId,
         startedAt: new Date()
       }
