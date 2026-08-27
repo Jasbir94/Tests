@@ -12,7 +12,7 @@ import {
   BarChart3,
   LayoutTemplate
 } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
 export default async function Home() {
@@ -64,24 +64,28 @@ export default async function Home() {
             } />
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-4 mt-8">
-                <Link className="text-lg font-semibold" href="#how-it-works">How it works</Link>
-                <Link className="text-lg font-semibold" href="#features">Features</Link>
-                <Link className="text-lg font-semibold" href="#pricing">Pricing</Link>
-                <hr className="my-4" />
-                <Link className="text-lg font-semibold" href="/demo">Try Demo</Link>
+                <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="#how-it-works">How it works</Link></SheetClose>
+                <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="#features">Features</Link></SheetClose>
+                <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="#pricing">Pricing</Link></SheetClose>
+                <hr className="my-2 border-slate-100" />
+                <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="/demo">Try Demo</Link></SheetClose>
                 {session?.user ? (
                   <>
-                    <Link className="text-lg font-semibold" href="/dashboard">Dashboard</Link>
-                    <Link href="/dashboard/create" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white shadow-sm rounded-lg mt-4 w-full" })}>
-                      Create Mock Test
-                    </Link>
+                    <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="/dashboard">Dashboard</Link></SheetClose>
+                    <SheetClose asChild>
+                      <Link href="/dashboard/create" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white shadow-sm rounded-lg mt-4 w-full h-12 text-lg" })}>
+                        Create Mock Test
+                      </Link>
+                    </SheetClose>
                   </>
                 ) : (
                   <>
-                    <Link className="text-lg font-semibold" href="/login">Login</Link>
-                    <Link href="/login" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white shadow-sm rounded-lg mt-4 w-full" })}>
-                      Get Started
-                    </Link>
+                    <SheetClose asChild><Link className="text-lg font-semibold px-2 py-1 rounded-md hover:bg-slate-50" href="/login">Login</Link></SheetClose>
+                    <SheetClose asChild>
+                      <Link href="/login" className={buttonVariants({ variant: "default", className: "bg-slate-900 hover:bg-slate-800 text-white shadow-sm rounded-lg mt-4 w-full h-12 text-lg" })}>
+                        Get Started
+                      </Link>
+                    </SheetClose>
                   </>
                 )}
               </nav>
