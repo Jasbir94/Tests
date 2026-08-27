@@ -7,8 +7,8 @@ export const authConfig = {
   pages: { signIn: "/login" },
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      clientId: process.env.GOOGLE_CLIENT_ID || "missing_client_id",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "missing_client_secret",
     }),
     // Credentials provider is fully configured in auth.ts; minimal stub here for edge
     Credentials({ credentials: {} }),

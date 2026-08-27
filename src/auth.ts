@@ -13,8 +13,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   // Override providers with full implementations (DB access)
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      clientId: process.env.GOOGLE_CLIENT_ID || "missing_client_id",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "missing_client_secret",
     }),
     CredentialsProvider({
       name: "credentials",
