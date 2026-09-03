@@ -2,23 +2,22 @@
 
 import { useAttemptStore } from "@/store/useAttemptStore";
 import { useTestCreationStore } from "@/store/useTestCreationStore";
-import { Button } from "@/components/ui/button";
-import { Bookmark, ChevronLeft, ChevronRight, Menu, X, Palette } from "lucide-react";
+import { ChevronLeft, ChevronRight, Palette, X, Bookmark } from "lucide-react";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function MobileExamControls() {
-  const { 
-    currentQuestion, 
-    answers, 
-    setAnswer, 
-    clearAnswer, 
-    markedForReview, 
+  const {
+    currentQuestion,
+    answers,
+    setAnswer,
+    clearAnswer,
+    markedForReview,
     toggleMarkForReview,
     setCurrentQuestion,
-    visitedQuestions
+    visitedQuestions,
   } = useAttemptStore();
-  
+
   const { answerKey, totalQuestions, questionPageMap } = useTestCreationStore();
   const [isPaletteOpen, setIsPaletteOpen] = useState(false);
 
@@ -26,19 +25,20 @@ export function MobileExamControls() {
   const qData = answerKey[currentQuestion];
   const qType = qData?.type || "MCQ";
   const userAns = answers[currentQuestion] || "";
+  const isMarked = !!markedForReview[currentQuestion];
 
   const navigateToQuestion = (qNum: number) => {
     setCurrentQuestion(qNum);
     if (questionPageMap && questionPageMap[qNum]) {
       useAttemptStore.getState().setPdfPage(questionPageMap[qNum]);
     }
-    setIsPaletteOpen(false); // Close palette on select
+    setIsPaletteOpen(false);
   };
 
   const handleNext = () => {
     if (currentQuestion < totalQuestions) navigateToQuestion(currentQuestion + 1);
   };
-  
+
   const handlePrev = () => {
     if (currentQuestion > 1) navigateToQuestion(currentQuestion - 1);
   };
@@ -47,170 +47,183 @@ export function MobileExamControls() {
     if (qType === "MSQ") {
       const current = userAns ? userAns.split(";") : [];
       if (current.includes(opt)) {
-        const updated = current.filter(o => o !== opt);
-        if (updated.length > 0) setAnswer(currentQuestion, updated.sort().join(";"));
-        else clearAnswer(currentQuestion);
+        const updated = current.filter((o) => o !== opt);
+        updated.length > 0 ? setAnswer(currentQuestion, updated.sort().join(";")) : clearAnswer(currentQuestion);
       } else {
         setAnswer(currentQuestion, [...current, opt].sort().join(";"));
       }
     } else {
-      setAnswer(currentQuestion, opt);
+      if (userAns === opt) {
+        clearAnswer(currentQuestion); // tap same option to deselect
+      } else {
+        setAnswer(currentQuestion, opt);
+      }
     }
   };
 
-  const isMarked = !!markedForReview[currentQuestion];
-
-  // Palette stats
+  // Stats
   const answeredCount = Object.keys(answers).length;
   const markedCount = Object.values(markedForReview).filter(Boolean).length;
   const notVisitedCount = totalQuestions - Object.keys(visitedQuestions).length;
 
   return (
-    <div className="absolute bottom-0 left-0 w-full z-20 flex flex-col pointer-events-none">
-      {/* Your Answer Bottom Card */}
-      <div className="bg-white rounded-t-3xl shadow-[0_-4px_20px_rgba(0,0,0,0.08)] pointer-events-auto flex flex-col pb-safe">
-        
-        {/* Drag handle hint */}
-        <div className="w-full flex justify-center pt-3 pb-1">
-          <div className="w-10 h-1 rounded-full bg-slate-200"></div>
-        </div>
+    <div className="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
+      {/* Bottom Answer Panel */}
+      <div className="bg-white border-t border-slate-200 pointer-events-auto shadow-[0_-2px_12px_rgba(0,0,0,0.08)]">
 
-        <div className="px-5 pb-4">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="font-bold text-[17px] text-slate-800">Your Answer</h3>
+        {/* Question meta + Mark for Review — compact single row */}
+        <div className="flex items-center justify-between px-4 pt-2.5 pb-1">
+          <div className="flex items-center gap-2">
+            <span className="text-[13px] font-bold text-slate-700">Q.{currentQuestion}</span>
+            <span className="text-[11px] font-semibold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded">{qType}</span>
+            {qData && (
+              <span className="text-[11px] text-slate-400 font-medium">
+                +{qData.marks} marks
+              </span>
+            )}
             {userAns && (
-              <button 
+              <button
                 onClick={() => clearAnswer(currentQuestion)}
-                className="text-sm font-semibold text-slate-500 hover:text-slate-700"
+                className="text-[11px] font-semibold text-red-500 ml-1"
               >
                 Clear
               </button>
             )}
           </div>
+          <button
+            onClick={() => toggleMarkForReview(currentQuestion)}
+            className={`flex items-center gap-1 text-[12px] font-semibold px-2.5 py-1 rounded-full transition-colors ${
+              isMarked
+                ? "bg-amber-100 text-amber-700"
+                : "bg-slate-100 text-slate-500"
+            }`}
+          >
+            <Bookmark className={`w-3.5 h-3.5 ${isMarked ? "fill-amber-600" : ""}`} />
+            {isMarked ? "Marked" : "Mark"}
+          </button>
+        </div>
 
-          {qType === "NAT" ? (
-            <input 
+        {/* Answer Options */}
+        {qType === "NAT" ? (
+          <div className="px-4 pb-3">
+            <input
               type="number"
               placeholder="Enter numerical answer"
-              className="w-full h-14 border border-slate-200 rounded-xl px-4 text-lg font-medium text-center focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+              className="w-full h-12 border-2 border-slate-200 rounded-xl px-4 text-base font-medium text-center focus:outline-none focus:border-primary"
               value={userAns}
               onChange={(e) => setAnswer(currentQuestion, e.target.value)}
             />
-          ) : (
-            <div className="grid grid-cols-2 gap-3">
-              {OPTIONS.map((opt) => {
-                const isSelected = qType === "MSQ" ? userAns.split(";").includes(opt) : userAns === opt;
-                return (
-                  <button
-                    key={opt}
-                    onClick={() => handleOptionClick(opt)}
-                    className={`h-14 rounded-xl border-2 font-bold text-lg transition-all ${
-                      isSelected 
-                        ? 'border-primary bg-primary/10 text-primary' 
-                        : 'border-slate-100 bg-white text-slate-700 hover:border-slate-200 hover:bg-slate-50'
-                    }`}
-                  >
-                    {opt}
-                  </button>
-                );
-              })}
-            </div>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-4 gap-2 px-4 pb-3">
+            {OPTIONS.map((opt) => {
+              const isSelected =
+                qType === "MSQ" ? userAns.split(";").includes(opt) : userAns === opt;
+              return (
+                <button
+                  key={opt}
+                  onClick={() => handleOptionClick(opt)}
+                  className={`h-12 rounded-xl border-2 font-bold text-base transition-all active:scale-95 ${
+                    isSelected
+                      ? "border-primary bg-primary/10 text-primary"
+                      : "border-slate-100 bg-white text-slate-700"
+                  }`}
+                >
+                  {opt}
+                </button>
+              );
+            })}
+          </div>
+        )}
 
-        {/* Sticky Action Bar */}
-        <div className="flex items-center justify-between px-3 py-3 border-t bg-white">
-          <Button 
-            variant="ghost" 
-            size="lg"
-            className="rounded-xl font-semibold px-4 h-12"
-            disabled={currentQuestion === 1}
+        {/* Bottom Nav Bar: Prev | Palette | Next */}
+        <div className="flex items-center border-t border-slate-100 bg-slate-50">
+          <button
             onClick={handlePrev}
+            disabled={currentQuestion === 1}
+            className="flex-1 h-12 flex items-center justify-center gap-1 text-[14px] font-semibold text-slate-600 disabled:opacity-40 active:bg-slate-100"
           >
-            <ChevronLeft className="w-5 h-5 mr-1" /> Prev
-          </Button>
+            <ChevronLeft className="w-4 h-4" /> Prev
+          </button>
 
+          {/* Palette trigger */}
           <Sheet open={isPaletteOpen} onOpenChange={setIsPaletteOpen}>
             <SheetTrigger render={
-              <Button variant="outline" className="h-12 w-12 rounded-full border-slate-200 shadow-sm p-0 flex-shrink-0 relative">
-                <Palette className="w-5 h-5 text-slate-700" />
+              <button className="h-12 w-16 flex flex-col items-center justify-center border-x border-slate-200 relative">
+                <Palette className="w-5 h-5 text-slate-600" />
                 {markedCount > 0 && (
-                  <div className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-orange-500 rounded-full border-2 border-white"></div>
+                  <span className="absolute top-2 right-3 w-2 h-2 bg-amber-500 rounded-full" />
                 )}
-              </Button>
+              </button>
             } />
-            <SheetContent side="bottom" className="h-[85vh] rounded-t-3xl p-0 flex flex-col">
-              <div className="flex items-center justify-between p-5 border-b">
-                <h3 className="font-bold text-xl">Question Palette</h3>
-                <Button variant="ghost" size="icon" onClick={() => setIsPaletteOpen(false)}>
-                  <X className="w-5 h-5" />
-                </Button>
-              </div>
-              
-              <div className="flex items-center justify-center gap-4 py-4 bg-slate-50 border-b text-[13px] font-semibold text-slate-600">
-                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded bg-green-500"></div> Answered</div>
-                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded bg-orange-500"></div> Marked</div>
-                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded bg-slate-200"></div> Not Visited</div>
+
+            {/* Question Palette Sheet */}
+            <SheetContent side="bottom" className="h-[80vh] rounded-t-2xl p-0 flex flex-col">
+              {/* Handle */}
+              <div className="flex justify-center pt-3 pb-1 shrink-0">
+                <div className="w-8 h-1 rounded-full bg-slate-200"></div>
               </div>
 
-              <div className="flex-1 overflow-y-auto p-5">
-                <div className="grid grid-cols-5 gap-3">
+              <div className="flex items-center justify-between px-5 pb-3 shrink-0">
+                <h3 className="font-bold text-lg">Question Palette</h3>
+                <button onClick={() => setIsPaletteOpen(false)} className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 text-slate-600">
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Legend */}
+              <div className="flex items-center justify-center gap-4 py-2 bg-slate-50 border-y text-[12px] font-semibold text-slate-600 shrink-0">
+                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded-sm bg-green-500"></div> Answered</div>
+                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded-sm bg-amber-400"></div> Marked</div>
+                <div className="flex items-center gap-1.5"><div className="w-3 h-3 rounded-sm bg-slate-200 border"></div> Not Visited</div>
+              </div>
+
+              {/* Grid */}
+              <div className="flex-1 overflow-y-auto p-4">
+                <div className="grid grid-cols-6 gap-2.5">
                   {Array.from({ length: totalQuestions }, (_, i) => i + 1).map((qNum) => {
                     const isAns = !!answers[qNum];
                     const isMrk = !!markedForReview[qNum];
                     const isVis = !!visitedQuestions[qNum];
                     const isCur = qNum === currentQuestion;
 
-                    let bgClass = "bg-slate-200 text-slate-600 font-medium";
-                    if (isAns && isMrk) bgClass = "bg-green-500 text-white border-2 border-orange-500";
-                    else if (isAns) bgClass = "bg-green-500 text-white";
-                    else if (isMrk) bgClass = "bg-orange-500 text-white";
-                    else if (isVis) bgClass = "bg-white border-2 border-slate-300 text-slate-700";
+                    let cls = "bg-slate-100 text-slate-500";
+                    if (isAns && isMrk) cls = "bg-green-500 text-white border-2 border-amber-400";
+                    else if (isAns) cls = "bg-green-500 text-white";
+                    else if (isMrk) cls = "bg-amber-400 text-white";
+                    else if (isVis) cls = "bg-white border border-slate-300 text-slate-700";
 
                     return (
                       <button
                         key={qNum}
                         onClick={() => navigateToQuestion(qNum)}
-                        className={`aspect-square rounded-xl flex items-center justify-center text-base ${bgClass} ${isCur ? 'ring-2 ring-primary ring-offset-2 font-bold' : ''}`}
+                        className={`aspect-square rounded-lg flex items-center justify-center text-[13px] font-semibold transition-transform active:scale-90 ${cls} ${
+                          isCur ? "ring-2 ring-primary ring-offset-1" : ""
+                        }`}
                       >
-                        {isCur ? `Q${qNum}` : qNum}
+                        {qNum}
                       </button>
                     );
                   })}
                 </div>
-                
-                {/* Progress Donut Alternative */}
-                <div className="mt-8 mb-4 flex items-center justify-center gap-6">
-                  <div className="relative w-20 h-20 flex items-center justify-center">
-                    <svg className="w-full h-full transform -rotate-90">
-                      <circle cx="40" cy="40" r="36" fill="transparent" stroke="#f1f5f9" strokeWidth="8" />
-                      <circle cx="40" cy="40" r="36" fill="transparent" stroke="#22c55e" strokeWidth="8" strokeDasharray={`${(answeredCount / totalQuestions) * 226} 226`} />
-                    </svg>
-                    <span className="absolute font-bold text-lg">{totalQuestions}</span>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className="font-bold text-slate-800">{totalQuestions} Total</span>
-                    <span className="text-sm font-semibold text-green-600">{answeredCount} Answered</span>
-                    <span className="text-sm font-medium text-slate-500">{notVisitedCount} Not Visited</span>
-                  </div>
-                </div>
               </div>
 
-              <div className="p-4 border-t bg-white">
-                <Button className="w-full h-14 rounded-xl text-lg font-bold" onClick={() => setIsPaletteOpen(false)}>
-                  Close Palette
-                </Button>
+              {/* Stats footer */}
+              <div className="shrink-0 px-5 py-3 border-t bg-slate-50 flex items-center justify-between text-sm font-semibold">
+                <span className="text-green-600">{answeredCount} Answered</span>
+                <span className="text-amber-600">{markedCount} Marked</span>
+                <span className="text-slate-500">{notVisitedCount} Not Visited</span>
               </div>
             </SheetContent>
           </Sheet>
 
-          <Button 
-            className="rounded-xl font-semibold px-4 h-12 bg-primary hover:bg-primary/90"
-            disabled={currentQuestion === totalQuestions}
+          <button
             onClick={handleNext}
+            disabled={currentQuestion === totalQuestions}
+            className="flex-1 h-12 flex items-center justify-center gap-1 text-[14px] font-bold text-primary disabled:opacity-40 active:bg-slate-100"
           >
-            Next <ChevronRight className="w-5 h-5 ml-1" />
-          </Button>
+            Next <ChevronRight className="w-4 h-4" />
+          </button>
         </div>
       </div>
     </div>

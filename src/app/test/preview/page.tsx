@@ -100,12 +100,12 @@ export default function TestPreviewPage() {
         </div>
 
         {/* Mobile Layout: Modern UI (< 768px) */}
-        <div className="md:hidden flex flex-col h-full w-full bg-slate-100 relative overflow-hidden">
-          {/* PDF Viewer - Takes full height but adds padding at bottom to avoid overlap with answer card */}
-          <div className="flex-1 w-full h-full pb-[220px] relative z-10">
+        <div className="md:hidden flex flex-col h-full w-full bg-[#404040] relative overflow-hidden">
+          {/* PDF Viewer — pb reserves space for the bottom panel (~175px) */}
+          <div className="flex-1 w-full h-full pb-[175px] relative z-10">
             <PdfViewer pdfUrl={pdfPreviewUrl} />
           </div>
-          
+
           {/* Answer Controls & Palette Overlay */}
           <MobileExamControls />
         </div>
