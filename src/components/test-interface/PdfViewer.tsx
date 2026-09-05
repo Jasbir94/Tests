@@ -18,19 +18,16 @@ function PdfViewerInner({ pdfUrl }: PdfViewerProps) {
   const [numPages, setNumPages] = useState<number>();
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState<number>(0);
-  const [isMobile, setIsMobile] = useState(false);
+
+  // zoom is a multiplier on top of fit-width (1.0 = fit width exactly)
+  const [zoom, setZoom] = useState(1.0);
 
   const pdfPage = useAttemptStore((s) => s.pdfPage);
-  const pdfScale = useAttemptStore((s) => s.pdfScale);
   const setPdfPage = useAttemptStore((s) => s.setPdfPage);
-  const setPdfScale = useAttemptStore((s) => s.setPdfScale);
   const setPdfNumPages = useAttemptStore((s) => s.setPdfNumPages);
 
-  // Measure container width for responsive scaling
+  // Always measure container width via ResizeObserver
   useEffect(() => {
-    const isMob = window.innerWidth < 768;
-    setIsMobile(isMob);
-
     const observer = new ResizeObserver((entries) => {
       for (const entry of entries) {
         setContainerWidth(entry.contentRect.width);
@@ -45,34 +42,37 @@ function PdfViewerInner({ pdfUrl }: PdfViewerProps) {
     return () => observer.disconnect();
   }, []);
 
-  // On mobile, auto-fit PDF width to container instead of using fixed scale
+  // Effective render width = container width × zoom multiplier
+  // This means the PDF is always at most as wide as the container at zoom=1.0
   const effectiveWidth = useMemo(() => {
-    if (containerWidth > 0 && isMobile) {
-      // Let react-pdf handle scaling by width
-      return containerWidth - 8; // 4px padding on each side
+    if (containerWidth > 0) {
+      return Math.floor(containerWidth * zoom) - 8; // 4px padding each side
     }
     return undefined;
-  }, [containerWidth, isMobile]);
+  }, [containerWidth, zoom]);
 
   const onDocumentLoadSuccess = useCallback(({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
-    setPdfNumPages(numPages); // share with store so navigation can use it
+    setPdfNumPages(numPages);
   }, [setPdfNumPages]);
 
-  const zoomIn = useCallback(() => setPdfScale((s: number) => Math.min(s + 0.2, 3)), [setPdfScale]);
-  const zoomOut = useCallback(() => setPdfScale((s: number) => Math.max(s - 0.2, 0.5)), [setPdfScale]);
-  const fitWidth = useCallback(() => setPdfScale(1.0), [setPdfScale]);
+  const zoomIn  = useCallback(() => setZoom(z => Math.min(+(z + 0.15).toFixed(2), 2.5)), []);
+  const zoomOut = useCallback(() => setZoom(z => Math.max(+(z - 0.15).toFixed(2), 0.4)), []);
+  const fitWidth = useCallback(() => setZoom(1.0), []);
+
   const prevPage = useCallback(() => setPdfPage(Math.max(pdfPage - 1, 1)), [pdfPage, setPdfPage]);
   const nextPage = useCallback(() => setPdfPage(Math.min(pdfPage + 1, numPages || 1)), [pdfPage, numPages, setPdfPage]);
 
   const fileOption = useMemo(() => pdfUrl, [pdfUrl]);
 
+  const zoomLabel = `${Math.round(zoom * 100)}%`;
+
   return (
     <div className="flex flex-col h-full bg-[#404040] min-w-0">
-      {/* Toolbar - Compact on mobile */}
-      <div className="flex items-center justify-between px-2 py-1.5 md:px-4 md:py-2 bg-[#1e1e20] text-slate-200 shadow-md z-10 shrink-0">
+      {/* Toolbar */}
+      <div className="flex items-center justify-between px-2 py-1.5 md:px-3 md:py-2 bg-[#1e1e20] text-slate-200 shadow-md z-10 shrink-0">
         {/* Page Navigation */}
-        <div className="flex items-center gap-1 md:gap-3">
+        <div className="flex items-center gap-1 md:gap-2">
           <button
             type="button"
             onClick={prevPage}
@@ -94,37 +94,22 @@ function PdfViewerInner({ pdfUrl }: PdfViewerProps) {
           </button>
         </div>
 
-        {/* Zoom Controls - hidden on mobile (auto-fit handles it) */}
-        <div className="hidden md:flex items-center gap-1">
-          <button type="button" onClick={zoomOut} className="h-8 w-8 flex items-center justify-center rounded text-slate-300 hover:text-white hover:bg-slate-700">
-            <ZoomOut className="h-4 w-4" />
-          </button>
-          <span className="text-sm font-medium w-12 text-center select-none">{Math.round(pdfScale * 100)}%</span>
-          <button type="button" onClick={zoomIn} className="h-8 w-8 flex items-center justify-center rounded text-slate-300 hover:text-white hover:bg-slate-700">
-            <ZoomIn className="h-4 w-4" />
-          </button>
-          <div className="w-px h-4 bg-slate-600 mx-1" />
-          <button type="button" onClick={fitWidth} className="h-8 px-2 text-xs rounded text-slate-300 hover:text-white hover:bg-slate-700">
-            Fit Width
-          </button>
-        </div>
-
-        {/* Mobile zoom strip */}
-        <div className="flex md:hidden items-center gap-1">
-          <button type="button" onClick={zoomOut} className="h-8 w-8 flex items-center justify-center rounded text-slate-300 hover:text-white hover:bg-slate-700">
+        {/* Zoom Controls — same on mobile and desktop */}
+        <div className="flex items-center gap-1">
+          <button type="button" onClick={zoomOut} className="h-8 w-8 flex items-center justify-center rounded text-slate-300 hover:text-white hover:bg-slate-700" title="Zoom out">
             <ZoomOut className="h-3.5 w-3.5" />
           </button>
-          <span className="text-[11px] font-medium w-8 text-center select-none">{Math.round(pdfScale * 100)}%</span>
-          <button type="button" onClick={zoomIn} className="h-8 w-8 flex items-center justify-center rounded text-slate-300 hover:text-white hover:bg-slate-700">
+          <span className="text-[11px] md:text-xs font-medium w-9 text-center select-none tabular-nums">{zoomLabel}</span>
+          <button type="button" onClick={zoomIn} className="h-8 w-8 flex items-center justify-center rounded text-slate-300 hover:text-white hover:bg-slate-700" title="Zoom in">
             <ZoomIn className="h-3.5 w-3.5" />
           </button>
-          <button type="button" onClick={fitWidth} className="h-8 w-8 flex items-center justify-center rounded text-slate-300 hover:text-white hover:bg-slate-700">
+          <button type="button" onClick={fitWidth} className="h-8 w-8 flex items-center justify-center rounded text-slate-300 hover:text-white hover:bg-slate-700" title="Fit to width">
             <Maximize2 className="h-3.5 w-3.5" />
           </button>
         </div>
       </div>
 
-      {/* PDF Scroll Area */}
+      {/* PDF Scroll Area — containerRef measures available width */}
       <div
         ref={containerRef}
         className="flex-1 overflow-auto flex justify-center bg-[#525659] min-w-0"
@@ -134,18 +119,20 @@ function PdfViewerInner({ pdfUrl }: PdfViewerProps) {
           file={fileOption}
           onLoadSuccess={onDocumentLoadSuccess}
           loading={
-            <div className="flex h-full items-center justify-center text-slate-300 text-sm">
+            <div className="flex h-48 items-center justify-center text-slate-300 text-sm">
               Loading PDF...
             </div>
           }
           className="flex flex-col items-center"
         >
+          {/* 
+            Always use width-based rendering.
+            At zoom=1.0 the page fits perfectly in the container — zero horizontal overflow.
+            Zooming in (>1.0) makes it wider and enables horizontal scroll.
+          */}
           <Page
             pageNumber={pdfPage}
-            // On mobile: use width-based rendering so it fills the container perfectly
-            // On desktop: use scale-based rendering
-            width={isMobile ? effectiveWidth : undefined}
-            scale={isMobile ? undefined : pdfScale}
+            width={effectiveWidth}
             renderTextLayer={true}
             renderAnnotationLayer={true}
             className="shadow-lg bg-white my-2"
