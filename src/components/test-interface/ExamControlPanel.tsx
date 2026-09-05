@@ -34,9 +34,8 @@ export function ExamControlPanel() {
       // Use explicit mapping (set during test creation)
       useAttemptStore.getState().setPdfPage(questionPageMap[qNum]);
     } else if (pdfNumPages > 0 && totalQuestions > 0) {
-      // Fallback: proportionally map question → PDF page
-      // e.g. Q5 of 65 in a 48-page PDF → page ~4
-      const proportionalPage = Math.max(1, Math.round((qNum / totalQuestions) * pdfNumPages));
+      // Ceiling ensures Q3 → page 3, not page 2 (avoids off-by-one)
+      const proportionalPage = Math.max(1, Math.ceil((qNum / totalQuestions) * pdfNumPages));
       useAttemptStore.getState().setPdfPage(proportionalPage);
     }
   };

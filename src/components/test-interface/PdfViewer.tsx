@@ -19,8 +19,8 @@ function PdfViewerInner({ pdfUrl }: PdfViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState<number>(0);
 
-  // zoom is a multiplier on top of fit-width (1.0 = fit width exactly)
-  const [zoom, setZoom] = useState(1.0);
+  // zoom is a multiplier on top of fit-width (1.0 = fill container, 0.75 = 75% of container)
+  const [zoom, setZoom] = useState(0.75);
 
   const pdfPage = useAttemptStore((s) => s.pdfPage);
   const setPdfPage = useAttemptStore((s) => s.setPdfPage);
@@ -58,7 +58,7 @@ function PdfViewerInner({ pdfUrl }: PdfViewerProps) {
 
   const zoomIn  = useCallback(() => setZoom(z => Math.min(+(z + 0.15).toFixed(2), 2.5)), []);
   const zoomOut = useCallback(() => setZoom(z => Math.max(+(z - 0.15).toFixed(2), 0.4)), []);
-  const fitWidth = useCallback(() => setZoom(1.0), []);
+  const fitWidth = useCallback(() => setZoom(0.75), []);
 
   const prevPage = useCallback(() => setPdfPage(Math.max(pdfPage - 1, 1)), [pdfPage, setPdfPage]);
   const nextPage = useCallback(() => setPdfPage(Math.min(pdfPage + 1, numPages || 1)), [pdfPage, numPages, setPdfPage]);
