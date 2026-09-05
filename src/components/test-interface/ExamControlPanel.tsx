@@ -33,10 +33,11 @@ export function ExamControlPanel() {
     if (questionPageMap && questionPageMap[qNum]) {
       // Use explicit mapping (set during test creation)
       useAttemptStore.getState().setPdfPage(questionPageMap[qNum]);
-    } else if (pdfNumPages > 0 && totalQuestions > 0) {
-      // Ceiling ensures Q3 → page 3, not page 2 (avoids off-by-one)
-      const proportionalPage = Math.max(1, Math.ceil((qNum / totalQuestions) * pdfNumPages));
-      useAttemptStore.getState().setPdfPage(proportionalPage);
+    } else if (pdfNumPages > 0) {
+      // Fallback: Assume Question N is on Page N (capped at max pages)
+      // This is much more predictable than proportional mapping
+      const fallbackPage = Math.min(qNum, pdfNumPages);
+      useAttemptStore.getState().setPdfPage(fallbackPage);
     }
   };
 
