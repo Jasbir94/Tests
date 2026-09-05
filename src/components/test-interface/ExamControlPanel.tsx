@@ -19,6 +19,7 @@ export function ExamControlPanel() {
   } = useAttemptStore();
   
   const { answerKey, totalQuestions, questionPageMap } = useTestCreationStore();
+  const pdfNumPages = useAttemptStore((s) => s.pdfNumPages);
   
   const [isPaletteOpen, setIsPaletteOpen] = useState(true);
 
@@ -30,7 +31,13 @@ export function ExamControlPanel() {
   const navigateToQuestion = (qNum: number) => {
     setCurrentQuestion(qNum);
     if (questionPageMap && questionPageMap[qNum]) {
+      // Use explicit mapping (set during test creation)
       useAttemptStore.getState().setPdfPage(questionPageMap[qNum]);
+    } else if (pdfNumPages > 0 && totalQuestions > 0) {
+      // Fallback: proportionally map question → PDF page
+      // e.g. Q5 of 65 in a 48-page PDF → page ~4
+      const proportionalPage = Math.max(1, Math.round((qNum / totalQuestions) * pdfNumPages));
+      useAttemptStore.getState().setPdfPage(proportionalPage);
     }
   };
 

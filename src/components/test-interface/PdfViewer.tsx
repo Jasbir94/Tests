@@ -24,6 +24,7 @@ function PdfViewerInner({ pdfUrl }: PdfViewerProps) {
   const pdfScale = useAttemptStore((s) => s.pdfScale);
   const setPdfPage = useAttemptStore((s) => s.setPdfPage);
   const setPdfScale = useAttemptStore((s) => s.setPdfScale);
+  const setPdfNumPages = useAttemptStore((s) => s.setPdfNumPages);
 
   // Measure container width for responsive scaling
   useEffect(() => {
@@ -55,7 +56,8 @@ function PdfViewerInner({ pdfUrl }: PdfViewerProps) {
 
   const onDocumentLoadSuccess = useCallback(({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
-  }, []);
+    setPdfNumPages(numPages); // share with store so navigation can use it
+  }, [setPdfNumPages]);
 
   const zoomIn = useCallback(() => setPdfScale((s: number) => Math.min(s + 0.2, 3)), [setPdfScale]);
   const zoomOut = useCallback(() => setPdfScale((s: number) => Math.max(s - 0.2, 0.5)), [setPdfScale]);

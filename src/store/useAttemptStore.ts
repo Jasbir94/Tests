@@ -9,6 +9,7 @@ interface AttemptState {
   isSubmitted: boolean;
   pdfPage: number;
   pdfScale: number;
+  pdfNumPages: number; // total pages in the loaded PDF
   dbAttemptId: string | null;
   
   setAnswer: (qNum: number, option: string) => void;
@@ -20,6 +21,7 @@ interface AttemptState {
   submitTest: () => void;
   resetAttempt: (duration: number, attemptId?: string) => void;
   setPdfPage: (page: number) => void;
+  setPdfNumPages: (n: number) => void;
   setPdfScale: (scale: number | ((prev: number) => number)) => void;
 }
 
@@ -32,6 +34,7 @@ export const useAttemptStore = create<AttemptState>((set, get) => ({
   isSubmitted: false,
   pdfPage: 1,
   pdfScale: 1.2,
+  pdfNumPages: 0,
   dbAttemptId: null,
   
   setAnswer: (qNum, option) => set((state) => ({
@@ -85,10 +88,12 @@ export const useAttemptStore = create<AttemptState>((set, get) => ({
     isSubmitted: false,
     pdfPage: 1,
     pdfScale: 1.2,
+    pdfNumPages: 0,
     dbAttemptId: attemptId || null
   }),
 
   setPdfPage: (page) => set({ pdfPage: page }),
+  setPdfNumPages: (n) => set({ pdfNumPages: n }),
   setPdfScale: (scale) => set((state) => ({ 
     pdfScale: typeof scale === 'function' ? scale(state.pdfScale) : scale 
   }))
