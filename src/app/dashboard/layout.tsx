@@ -20,7 +20,7 @@ export default async function DashboardLayout({
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold">
               M
             </div>
-            <span className="font-bold text-lg hidden md:block">MockPDF</span>
+            <span className="font-bold text-lg hidden md:block font-serif tracking-tight">MockPDF</span>
           </Link>
         </div>
 

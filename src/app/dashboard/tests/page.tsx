@@ -48,12 +48,12 @@ export default async function MyTestsPage() {
       <div className="sticky top-0 z-10 bg-slate-50 border-b border-slate-100 px-4 pt-4 pb-3 md:px-8">
         <div className="flex items-center justify-between max-w-3xl mx-auto">
           <div>
-            <h1 className="text-xl font-bold text-slate-900">My Tests</h1>
+            <h1 className="text-xl font-bold text-slate-900 font-serif">My Tests</h1>
             <p className="text-sm text-slate-500 mt-0.5">{tests.length} test{tests.length !== 1 ? "s" : ""} created</p>
           </div>
           <Link
             href="/dashboard/create"
-            className="flex items-center gap-1.5 h-10 px-4 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl transition-colors shadow-sm"
+            className="flex items-center gap-1.5 h-10 px-4 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold rounded-xl transition-colors shadow-sm"
           >
             <Plus className="w-4 h-4" />
             <span className="hidden sm:inline">New Test</span>
@@ -65,8 +65,8 @@ export default async function MyTestsPage() {
         {tests.length === 0 ? (
           /* Empty State */
           <div className="flex flex-col items-center justify-center py-20 text-center">
-            <div className="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center mb-4">
-              <BookOpen className="w-8 h-8 text-indigo-400" />
+            <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center mb-4">
+              <BookOpen className="w-8 h-8 text-slate-500" />
             </div>
             <h2 className="text-lg font-bold text-slate-800 mb-1">No tests yet</h2>
             <p className="text-slate-500 text-sm mb-6 max-w-xs">
@@ -74,7 +74,7 @@ export default async function MyTestsPage() {
             </p>
             <Link
               href="/dashboard/create"
-              className="flex items-center gap-2 h-12 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-colors"
+              className="flex items-center gap-2 h-12 px-6 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-colors"
             >
               <Plus className="w-4 h-4" />
               Create your first test
@@ -145,13 +145,13 @@ export default async function MyTestsPage() {
                       href={`/test/preview/results?testId=${test.id}`}
                       className="flex-1 flex items-center justify-center gap-1.5 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-50 transition-colors border-r border-slate-100"
                     >
-                      <BarChart2 className="w-4 h-4 text-indigo-500" />
+                      <BarChart2 className="w-4 h-4 text-slate-700" />
                       Results
                     </Link>
                   )}
                   <Link
                     href={`/dashboard/create?testId=${test.id}`}
-                    className="flex-1 flex items-center justify-center gap-1.5 py-3 text-sm font-semibold text-indigo-600 hover:bg-indigo-50 transition-colors"
+                    className="flex-1 flex items-center justify-center gap-1.5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-100 transition-colors"
                   >
                     {hasAttempt ? (
                       <><RotateCcw className="w-4 h-4" /> Retake</>
@@ -169,3 +169,4 @@ export default async function MyTestsPage() {
     </div>
   );
 }
+

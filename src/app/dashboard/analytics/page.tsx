@@ -67,7 +67,7 @@ export default async function AnalyticsPage() {
       {/* Page Header */}
       <div className="sticky top-0 z-10 bg-slate-50 border-b border-slate-100 px-4 pt-4 pb-3 md:px-8">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-xl font-bold text-slate-900">Analytics</h1>
+          <h1 className="text-xl font-bold text-slate-900 font-serif">Analytics</h1>
           <p className="text-sm text-slate-500 mt-0.5">Your performance across all tests</p>
         </div>
       </div>
@@ -77,8 +77,8 @@ export default async function AnalyticsPage() {
         {totalAttempts === 0 ? (
           /* Empty State */
           <div className="flex flex-col items-center justify-center py-20 text-center">
-            <div className="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center mb-4">
-              <BarChart2 className="w-8 h-8 text-indigo-400" />
+            <div className="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center mb-4">
+              <BarChart2 className="w-8 h-8 text-slate-500" />
             </div>
             <h2 className="text-lg font-bold text-slate-800 mb-1">No data yet</h2>
             <p className="text-slate-500 text-sm mb-6 max-w-xs">
@@ -86,7 +86,7 @@ export default async function AnalyticsPage() {
             </p>
             <Link
               href="/dashboard/tests"
-              className="flex items-center gap-2 h-12 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-colors"
+              className="flex items-center gap-2 h-12 px-6 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl transition-colors"
             >
               <BookOpen className="w-4 h-4" />
               Go to My Tests
@@ -96,7 +96,7 @@ export default async function AnalyticsPage() {
           <>
             {/* ── Summary Stats Grid ── */}
             <div className="grid grid-cols-2 gap-3">
-              <StatCard icon={<Target className="w-5 h-5 text-indigo-500" />} label="Avg Score" value={`${avgScore}%`} />
+              <StatCard icon={<Target className="w-5 h-5 text-slate-700" />} label="Avg Score" value={`${avgScore}%`} />
               <StatCard icon={<Award className="w-5 h-5 text-amber-500" />} label="Best Score" value={`${bestScore}%`} />
               <StatCard icon={<CheckCircle2 className="w-5 h-5 text-green-500" />} label="Accuracy" value={`${accuracy}%`} />
               <StatCard icon={<Clock className="w-5 h-5 text-blue-500" />} label="Time Studied" value={hoursStr} />
@@ -151,7 +151,7 @@ export default async function AnalyticsPage() {
               {attempts.length > 8 && (
                 <Link
                   href="/dashboard/tests"
-                  className="block text-center text-sm font-semibold text-indigo-600 mt-3 hover:underline"
+                  className="block text-center text-sm font-semibold text-slate-900 mt-3 hover:underline"
                 >
                   View all tests →
                 </Link>
@@ -177,3 +177,4 @@ function StatCard({ icon, label, value }: { icon: React.ReactNode; label: string
     </div>
   );
 }
+

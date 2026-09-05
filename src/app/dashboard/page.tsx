@@ -47,22 +47,22 @@ export default async function DashboardPage() {
       
       {/* Mobile Greeting (Desktop handles this in layout or left aligns) */}
       <div className="pt-2">
-        <h1 className="text-[26px] md:text-3xl font-bold tracking-tight text-slate-900 leading-tight">
+        <h1 className="text-[26px] md:text-3xl font-bold tracking-tight text-slate-900 leading-tight font-serif">
           {greeting},<br className="md:hidden" /> {firstName}
         </h1>
       </div>
 
       {/* Main Hero Card */}
-      <div className="bg-[#2D2A4A] rounded-2xl md:rounded-[24px] p-6 md:p-10 flex flex-col items-start relative overflow-hidden shadow-md">
+      <div className="bg-slate-900 rounded-2xl md:rounded-[24px] p-6 md:p-10 flex flex-col items-start relative overflow-hidden shadow-md">
         {/* Subtle decorative circles */}
         <div className="absolute top-0 right-0 -mt-10 -mr-10 w-48 h-48 bg-white/5 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-0 right-20 w-32 h-32 bg-indigo-500/20 rounded-full blur-xl"></div>
+        <div className="absolute bottom-0 right-20 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
         
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 relative z-10">Ready for your next test?</h2>
-        <p className="text-indigo-100/80 mb-8 text-sm md:text-base max-w-sm relative z-10">Turn any question paper into a real exam environment.</p>
+        <p className="text-slate-300 mb-8 text-sm md:text-base max-w-sm relative z-10">Turn any question paper into a real exam environment.</p>
         
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto relative z-10">
-          <Link href="/dashboard/create" className="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold h-12 px-6 rounded-xl flex items-center justify-center transition-colors">
+          <Link href="/dashboard/create" className="bg-slate-800 hover:bg-slate-700 text-white font-semibold h-12 px-6 rounded-xl flex items-center justify-center transition-colors">
             Create Mock Test
           </Link>
           <Link href="/dashboard/tests" className="bg-white/10 hover:bg-white/20 text-white font-semibold h-12 px-6 rounded-xl flex items-center justify-center transition-colors">
@@ -115,7 +115,7 @@ export default async function DashboardPage() {
               <div className="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm flex flex-col">
                 <div className="flex justify-between items-start mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600">
+                    <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-900">
                       <FileTextIcon className="w-5 h-5" />
                     </div>
                     <div>
@@ -131,7 +131,7 @@ export default async function DashboardPage() {
                     <span>0 / {activeTest.totalQuestions}</span>
                   </div>
                   <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-indigo-500 rounded-full" style={{ width: '0%' }}></div>
+                    <div className="h-full bg-slate-800 rounded-full" style={{ width: '0%' }}></div>
                   </div>
                 </div>
 
@@ -147,7 +147,7 @@ export default async function DashboardPage() {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-lg font-bold text-slate-900">Recent Tests</h3>
-                <Link href="/dashboard/tests" className="text-sm font-semibold text-indigo-600 hover:text-indigo-700">See all</Link>
+                <Link href="/dashboard/tests" className="text-sm font-semibold text-slate-900 hover:text-slate-800">See all</Link>
               </div>
               <div className="flex flex-col gap-3">
                 {recentTests.map((test) => {
@@ -237,3 +237,4 @@ function FileTextIcon(props: any) {
     </svg>
   );
 }
+
