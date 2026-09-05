@@ -45,6 +45,17 @@ export default function DemoPage() {
       // Create object URL
       const url = URL.createObjectURL(demoFile);
 
+      // Exact mapping of questions to their pages in CS22025.pdf
+      const DEMO_PAGE_MAP: Record<number, number> = {
+        1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10,
+        11: 11, 12: 11, 13: 12, 14: 13, 15: 13, 16: 14, 17: 15, 18: 16, 19: 17, 20: 18,
+        21: 18, 22: 19, 23: 20, 24: 20, 25: 21, 26: 21, 27: 22, 28: 22, 29: 23, 30: 24,
+        31: 25, 32: 25, 33: 26, 34: 26, 35: 27, 36: 27, 37: 28, 38: 29, 39: 30, 40: 30,
+        41: 31, 42: 31, 43: 32, 44: 33, 45: 34, 46: 35, 47: 36, 48: 37, 49: 38, 50: 38,
+        51: 39, 52: 40, 53: 41, 54: 42, 55: 43, 56: 43, 57: 43, 58: 44, 59: 44, 60: 45,
+        61: 45, 62: 46, 63: 47, 64: 47, 65: 48,
+      };
+
       setTestConfig({
         pdfFile: demoFile,
         pdfPreviewUrl: url,
@@ -52,7 +63,7 @@ export default function DemoPage() {
         duration: 180, // 3 hours
         totalQuestions: 65,
         dbTestId: null,
-        questionPageMap: {},
+        questionPageMap: DEMO_PAGE_MAP,
         questionOptionsMap: {},
       });
 

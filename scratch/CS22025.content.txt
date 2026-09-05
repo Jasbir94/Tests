@@ -1,0 +1,1084 @@
+ 
+Organising Institute: IIT Roorkee                        Page 1 of 48 
+                                                           
+               
+(D)         revolve 
+(C)         resolve 
+(B)         satisfaction 
+(A)         ambivalence 
+               
+Select the most appropriate option to complete the above sentence.   
+the project never wavered.  
+Q.1        Despite his initial hesitation, Rehman’s _________ to contribute to the success of 
+Q.1 – Q.5 Carry ONE mark Each  
+General Aptitude  
+Computer Science and Information Technology (CS2) 
+----------------Page (0) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 2 of 48 
+                                                           
+ 
+ 
+ 
+ 
+ 
+               
+(D)         Lair 
+(C)         Hive 
+(B)         Hammock 
+(A)         Kennel 
+               
+Select the correct option to complete the analogy.   
+Q.2        Bird : Nest :: Bee : _______ 
+Computer Science and Information Technology (CS2) 
+----------------Page (1) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 3 of 48 
+                                                           
+               
+푄
+=0 
+(D)         푃
+(C)         푃=1; 푄 =−1 
+(B)         푃=푄 =1 
+(A)         푃=푄 =0 
+               
+true? 
+Q.3        If  푃푒푥 =푄푒−푥  for all real values of   푥, which one of the following statements is 
+Computer Science and Information Technology (CS2) 
+----------------Page (2) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 4 of 48 
+                                                           
+               
+(D)          
+(C)          
+(B)          
+(A)          
+               
+Note: The figures shown are representative.  
+correctly represents the cube? 
+corresponds  to  a  particular  face  of the  cube.  Which  one  of the following  options 
+Q.4        The  paper  as  shown  in  the  figure  is  folded  to  make  a  cube  where  each  square 
+Computer Science and Information Technology (CS2) 
+----------------Page (3) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 5 of 48 
+                                                 
+ 
+ 
+ 
+ 
+ 
+ 
+               
+1 2
+(D)         푝 푝 +1 is a prime number. 
+1  2
+(C)         푝 +푝 +1 is a prime number. 
+1 2
+(B)         푝 푝  is not a prime number. 
+1  2
+(A)         푝 +푝  is not a prime number. 
+               
+1   2
+statements is correct for all values of  푝 and 푝 ? 
+1   2
+Q.5        Let  푝  and  푝   denote  two  arbitrary  prime  numbers.  Which  one  of  the  following 
+Computer Science and Information Technology (CS2) 
+----------------Page (4) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 6 of 48 
+                                                           
+               
+(D)         Josephine was in the hospital due to an injury to  her leg. 
+(C)         Ramya and Josephine were once close friends; but now, they are not.  
+(B)         Ramya did not know that Josephine was in the hospital.  
+(A)         Ramya knew that Josephine was in the hospital.  
+               
+see you”, Ramya told Josephine. 
+“Even if I had known that you were in the hospital, I would not have gone there to 
+Q.6        Based only on the conversation below, identify the logically correct inference:  
+Q.6 – Q.10 Carry TWO marks Each  
+Computer Science and Information Technology (CS2) 
+----------------Page (5) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 7 of 48 
+                                                           
+ 
+ 
+ 
+ 
+ 
+               
+(D)         IBCEC 
+(C)         JGIBC 
+(B)         IDBFC 
+(A)         CEADP 
+               
+one among the given options is the most appropriate code for BEACH ?  
+Q.7        If IMAGE and FIELD are coded as FHBNJ and EMFJG respectively then, which 
+Computer Science and Information Technology (CS2) 
+----------------Page (6) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 8 of 48 
+                                                           
+               
+(D)         푋(푖)=푋(푖− 1)+퐼(푖);       푌(푖)=푌(푖− 1)퐼(푖− 1);        푖>0 
+(C)         푋(푖)=푋(푖− 1)퐼(푖);       푌(푖)=푌(푖− 1)퐼(푖);       푖>0 
+(B)         푋(푖)=푋(푖− 1)퐼(푖);      푌(푖)=푌(푖− 1)+퐼(푖);      푖>0      
+(A)          푋(푖)=푋(푖− 1)+퐼(푖);    푌(푖)=푌(푖− 1)퐼(푖);      푖>0 
+Output (Y)            20          −80         −800         −12000 
+Output (X)            20            16              26                 41 
+Input (I)               20           −4             10                 15 
+ Iteration (i)           0               1               2                   3 
+ 
+ 
+Q.8        Which one of the following options is correct for the given data in the table?   
+Computer Science and Information Technology (CS2) 
+----------------Page (7) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 9 of 48 
+                                                           
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+               
+(D)         4 
+(C)         8 
+(B)         2 
+2√2 
+(A) 
+ 
+L 
+Q                        R 
+ 
+M 
+ 
+ 
+P                      S 
+                                                                        N 
+Note: The figure shown is representative.  
+What is the area (in cm2) of the rectangle PLMN? 
+the corner S of the square. 
+corner L of the rectangle is on the side QR. Side MN of the rectangle passes through 
+Q.9        In the given figure, PQRS is a   square of side 2 cm and PLMN is a rectangle. The 
+Computer Science and Information Technology (CS2) 
+----------------Page (8) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 10 of 48 
+                                                 
+ 
+ 
+ 
+ 
+               
+(D)         Bridges on P, Q, S, U, and V 
+(C)         Bridges on Q, R, T, and V 
+(B)         Bridges on P, Q, S, and T 
+(A)         Bridges on P, Q, and T 
+S 
+Z5 
+Z1                                                   U 
+Q                                       Z4 
+P 
+T 
+V 
+ 
+R 
+Z2 
+Z3 
+               
+Note: The figure shown is representative.  
+options, which one is correct? 
+need to connect these zones using the least number of bridges. Out of the following 
+S, T, U, and V. It splits the land into 5 zones, marked Z1, Z2, Z3, Z4, and Z5. We 
+Q.10      The diagram below shows a river system consisting of 7 segments, marked P, Q, R, 
+Computer Science and Information Technology (CS2) 
+----------------Page (9) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 11 of 48 
+ 
+ 
+               
+(D)         푒− 1  
+(C)         푒2  
+(B)         푒  
+√
+(A)           푒  
+               
+1       4
+The value of 푥 such that 푥>1, satisfying the equation ∫ 푡 ln 푡 푑푡=   is 
+Q.12                                                                                                 푥       1
+               
+0 3125
+(     )  
+(D)           3125  0
+0 625
+(    )  
+(C)           625 0
+0 125
+(    )  
+(B)           125 0
+0 25
+(   )  
+(A)           25 0
+               
+2 −1
+If 퐴=(  ), then which ONE of the following is 퐴8 ? 
+Q.11                    1 2
+Q.11 – Q.35 Carry ONE mark Each 
+Computer Science and Information Technology (CS2) 
+----------------Page (10) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 12 of 48 
+                                                           
+               
+2
+ 
+(D)         푛+1
+2
+ 
+(C) 
+푛
+2
+ 
+(B)         푛− 1
+2
+ 
+(A)         푛− 2
+               
+children? 
+Which ONE  of  the  following  is  the  number  of  nodes  in  푇  that  have  exactly  two 
+Let 푛>0 be the number of nodes in 푇.   
+Q.13      Consider  a  binary  tree  푇  in  which  every  node  has either  zero  or two  children.  
+Computer Science and Information Technology (CS2) 
+----------------Page (11) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 13 of 48 
+               
+(D)         (푃(1000)∧(∀푥 [푃(푥)⇒ 푃(푥+1)]))⇒ (∀푥 푃(푥))  
+(C)         (푃(1000)∧(∀푥 [푃(푥)⇒ 푃(푥− 1)]))⇒ (∀푥 푃(푥))  
+(B)         (푃(0)∧(∀푥 [푃(푥)⇒ 푃(푥− 1)]))⇒ (∀푥 푃(푥))  
+(A)         (푃(0)∧(∀푥 [푃(푥)⇒ 푃(푥+1)]))⇒ (∀푥 푃(푥))  
+               
+Which ONE of the following statements is TRUE? 
+Q.15      Let 푃(푥) be an arbitrary predicate over the domain of natural numbers.   
+               
+(D)         3 
+(C)         2 
+(B)         1 
+(A)         0 
+               
+Which ONE of the following is the value of the determinant of  (푀 − 푁)? 
+퐿2=퐿−1 , 푀 =퐿8 and 푁 =퐿2.  
+Q.14      Let 퐿,푀, and 푁 be non-singular matrices of order 3 satisfying the equations  
+Computer Science and Information Technology (CS2) 
+----------------Page (12) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 14 of 48 
+                                                           
+(D)         Both (i) and (ii) are FALSE 
+(C)         (i) is FALSE and (ii) is TRUE 
+(B)         (i) is TRUE and (ii) is FALSE 
+(A)         Both (i) and (ii) are TRUE 
+               
+Which ONE of the following is CORRECT?  
+ 
+data from S to R and acknowledgement for a segment from R to S.  
+(ii)      A single TCP segment from a sender S to a receiver R cannot carry both 
+address to the corresponding hardware (link -layer) address. 
+(i)       Address  Resolution  Protocol  (ARP)  provides  a  mapping  from  an  IP 
+Q.16      Consider the following statements:  
+Computer Science and Information Technology (CS2) 
+----------------Page (13) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 15 of 48 
+                                                           
+ 
+               
+(D)         (i) – (b) and (ii) – (b) 
+(C)         (i) – (b) and (ii) – (a) 
+(B)         (i) – (a) and (ii) – (a) 
+(A)         (i) – (a) and (ii) – (b) 
+               
+options is CORRECT? 
+For matching of items in  List I with those in  List II, which ONE of the following 
+(ii)       Link state routing                          (b)       Dijkstra 
+(i)        Distance vector routing                 (a)        Bellman-Ford 
+List I                                                        List II 
+Q.17      Consider the routing protocols given in  List I and the names given in List II: 
+Computer Science and Information Technology (CS2) 
+----------------Page (14) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 16 of 48 
+                                                           
+               
+(D)         Routing Information Protocol (RIP)  
+(C)         Open Shortest Path First (OSPF)  
+(B)         Internet Group Management Protocol (IGMP) 
+(A)         Internet Control Message Protocol (ICMP)  
+               
+Which ONE of the following is NOT a possible candidate for X? 
+ 
+protocol number of a protocol X.   
+Q.18      A machine receives an IPv4 datagram. The protocol field of the IPv4 header has the 
+Computer Science and Information Technology (CS2) 
+----------------Page (15) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 17 of 48 
+                                                           
+(D)         Hello World!d! 
+(C)         ello World! 
+(B)         Hello World! 
+(A)         @#Hello World! 
+               
+Which ONE of the following will be the output of the program?   
+}  
+*s++ = *t++; 
+while(*t) 
+void stringcopy(char *s, char *t) { 
+} 
+return 0; 
+printf("%s\n", a); 
+stringcopy(a, a + 2); 
+char a[30] = "@#Hello World!"; 
+int main(){ 
+void stringcopy(char *, char *); 
+#include <stdio.h> 
+Q.19      Consider the following C program: 
+Computer Science and Information Technology (CS2) 
+----------------Page (16) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 18 of 48 
+(D)         Neither (I) nor (II) is correct. 
+(C)         Both (I) and (II) are correct.  
+(B)         Only (II) is correct. 
+(A)         Only (I) is correct. 
+ 
+ 
+Which ONE of the following options is CORRECT?  
+statements in one pass. 
+(II)      Backpatching   can   be   used   to   generate   code   for  flow-of-control 
+one pass. 
+(I)       Backpatching  can  be  used  to  generate code  for  Boolean  expression  in 
+intermediate code generation: 
+Q.21      Consider the following statements about the use of backpatching in a compiler for 
+               
+(D)         2푁 − 1 
+(C)         푁 
+(B)         푁 − 1 
+(A)         1 
+               
+in the list that is NOT the largest in the list? 
+What is the minimum number of element   comparisons required to find an integer 
+Q.20      Consider an unordered list of 푁 distinct integers. 
+Computer Science and Information Technology (CS2) 
+----------------Page (17) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 19 of 48 
+                                                           
+               
+is L-attributed; Rule 3 is S -attributed and L -attributed 
+(D)         Rule  1  is  S  -attributed  and  not  L  -attributed;  Rule  2  is  not  S   -attributed  and   
+is L-attributed; Rule 3 is S -attributed and L -attributed 
+(C)         Rule  1  is  neither  S-attributed  nor  L-attributed;  Rule  2  is  not  S -attributed  and  
+attributed; Rule 3 is S -attributed and L-attributed 
+(B)         Rule  1  is  neither  S -attributed  nor  L -attributed;  Rule  2  is  S -attributed  and   L-
+Rule 3 is neither S -attributed nor L -attributed 
+(A)         Rule 1 is  S-attributed and L -attributed; Rule 2 is S -attributed and not L -attributed; 
+               
+Which ONE is the  CORRECT option among the following?  
+Rule 3: 푄 →  퐸퐹 {푄.푖=퐸.푖+퐹.푖;} 
+Rule 2: 푃 →  퐶퐷 {푃.푖=퐶.푖+퐷.푖;퐷.푖=퐶.푖+2;} 
+Rule 1: 푅 →  퐴퐵 {퐵.푖=푅.푖− 1;퐴.푖=퐵.푖;푅.푖=퐴.푖+1;} 
+Q.22      Given the following syntax directed translation rules: 
+Computer Science and Information Technology (CS2) 
+----------------Page (18) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 20 of 48 
+               
+(D)         Any decidable language. 
+(C)         Any language accepted by a non-deterministic pushdown automaton. 
+(B)         Any context-free language. 
+(A)         Any regular language. 
+               
+automaton?  
+Q.24      Which ONE of the following languages is accepted by a deterministic push down 
+               
+(D)         6 fragments, 116 bytes 
+(C)         6 fragments, 108 bytes 
+(B)         6 fragments, 88 bytes 
+(A)         5 fragments, 1488 bytes 
+               
+transmitted and the size of the last fragment including IPv4 header?  
+Which ONE of the following choices has the CORRECT total number of fragments 
+segment is 7488 bytes. 
+its  data  field.  A  UDP  segment  is transmitted.  The  payload  (data)  in the  UDP 
+use any options field. Each Ethernet frame can carry  a maximum of 1500 bytes in 
+Q.23      Consider a network that uses  Ethernet and IPv4. Assume  that IPv4 headers  do not 
+Computer Science and Information Technology (CS2) 
+----------------Page (19) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 21 of 48 
+               
+(D)         19 
+(C)         37 
+(B)         15 
+(A)         22 
+               
+processes  in milliseconds ?  
+Which ONE of the following  correctly gives the average turnaround time of the four 
+policy. Ignore context switching times.   
+Shortest  Remaining  Time  First  (SRTF)  algorithm  is  used  as  the CPU  scheduling 
+respectively , and have execution times of  10, 13, 6, and 9 milliseconds  respectively. 
+Q.26      Processes 푃1,푃2,푃3,푃4 arrive in that order at times 0, 1, 2, and 8  milliseconds   
+               
+1
+(D)         Is 퐿(퐺 ) = ∅? 
+1
+(C)         Is 퐿(퐺 )=퐿(푅)? 
+1    2
+(B)         Is 퐿(퐺 )∩ 퐿(퐺 )=∅? 
+1    2
+(A)         Is 퐿(퐺 )=퐿(퐺 )? 
+               
+Which ONE among the following questions is decidable? 
+grammar 퐺,  let 퐿(퐺) denote the language generated by 퐺.  
+1 2
+Q.25      Let 퐺 ,퐺  be Context Free Grammars (CFGs) and 푅 be a regular expression. For a 
+Computer Science and Information Technology (CS2) 
+----------------Page (20) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 22 of 48 
+               
+(D)         The total number of registers 
+(C)         The number of cache memory levels  
+(B)         The clock frequency of the processor  
+(A)         The size of the cache memory 
+               
+Q.28      Which of the following is/are part of an Instruction Set Architecture of a processor? 
+               
+(D)         Durability 
+(C)         Isolation 
+(B)         Consistency 
+(A)         Atomicity 
+               
+system? 
+Which  of  the  following  properties  is/are  certain  to  have  been  violated  by  the 
+퐴 was debited only once and ended up with a balance of Rs. 1000.  
+initial balance in 퐴 and were allowed to go through. 퐵 was credited Rs. 10000 twice. 
+account 퐴 to account 퐵.  Both transactions read the same value , Rs. 11000, as the 
+joint holders of account 퐴 attempted simultaneous transfers of Rs. 10000 each from 
+Q.27      An audit of a banking transactions system has found that on an earlier occasion, two 
+Computer Science and Information Technology (CS2) 
+----------------Page (21) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 23 of 48 
+                                                           
+               
+(D)         Both BFS and DFS can be used to find the connected components of  G.  
+the source vertex 푠 to 푢 and 푣 in the BFS tree are within ±1 of each other. 
+(C)         If (푢,푣) is a non-tree edge of G with respect to a BFS tree, then the distances from 
+(B)         Every non-tree edge of G with respect to a DFS tree is a forward/back edge. 
+(A)         A DFS tree of 퐺 is a Shortest Path tree of 퐺. 
+               
+Depth First Search (DFS) on an undirected simple graph G is/are TRUE?  
+Q.29       Which  of  the  following  statements  regarding  Breadth  First  Search  (BFS)  and  
+Computer Science and Information Technology (CS2) 
+----------------Page (22) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 24 of 48 
+                                                           
+               
+(D)         (i) – (a), (ii) – (c), and (iii) – (b)   
+(C)         (i) – (b), (ii) – (c), and (iii) – (a)   
+(B)         (i) – (b), (ii) – (a), and (iii) – (c)   
+(A)         (i) – (a), (ii) – (b), and (iii) – (c)   
+               
+option(s) is/are CORRECT? 
+For matching of items in List I with those in List II, which of the following 
+ 
+(iii) Regular languages                      (c) Closed under intersection 
+(ii) Recursive languages                    (b) Not closed under complementation  
+(i) Context free languages                 (a) Closed under union 
+List I                                                     List II 
+Q.30      Consider the two lists List I and List II given below: 
+Computer Science and Information Technology (CS2) 
+----------------Page (23) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 25 of 48 
+                                                           
+               
+___________. (Answer in integer) 
+The  total  number  of  addition  and  subtraction  operations  to  be  performed  is 
+M: 1100 1101 1110 1101 and Q: 1010 0100 1010 1010  
+multiplier Q) are being multiplied using Booth’s algorithm: 
+Q.32      The  following  two  signed  2’s  complement  numbers  (multiplicand  M  and  
+               
+(D)         푋 + 푌  
+̅
+(C)         푋 푌 +푋 + 푋푌  
+̅̅̅̅̅ ̅  ̅
+(B)         푋+푌+ 푋푌  
+̅ ̅  ̅
+(A)         푋 푌  
+̅̅̅̅̅
+               
+Which is/are the CORRECT option(s) for the output function 퐹? 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Q.31      Consider the following logic circuit diagram. 
+Computer Science and Information Technology (CS2) 
+----------------Page (24) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 26 of 48 
+                                                 
+ 
+ 
+ 
+ 
+ 
+               
+is ___________. (Answer in integer) 
+The number of edges in the path from the node containing  19 to the root node of  푇 
+initially  empty  binary  search  tree.  Let   푇  be  the  resulting  binary  search  tree.   
+Q.35      Suppose  the  values 10,−4,15,30,20,5,60,19  are  inserted  in  that  order  into  an 
+               
+in integer) 
+microseconds, then the frequency of the ripple counter in kHz is ________. (Answer 
+Q.34      In  a  4-bit  ripple  counter,  if  the  period  of  the  waveform  at  the  last  flip-flop  is  64 
+               
+The output of the given C code segment is ________. (Answer in integer) 
+    printf("%d",x); 
+    } while(x!=y); 
+         else y=y-x; 
+         if(x>y) x=x-y; 
+    do { 
+    int x=126,y=105; 
+Q.33 
+     
+Computer Science and Information Technology (CS2) 
+----------------Page (25) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 27 of 48 
+                                                           
+               
+(D)         66.67 
+(C)         85.44 
+(B)         93.75 
+(A)         88.23 
+                                                                                 
+ 
+above scenario in percentage? 
+Which ONE of the following  most accurately  gives the channel utilization for the 
+negligible. Also, assume that the size of the acknowledgement packet is negligible. 
+milliseconds.  Assume  that the  processing  times  at  the  source  and  destination  are 
+bps  (bits/second)  and  the  propagation  delay  between  the  two  nodes  is  100 
+protocol. The frame size is 3000 bits. The transmission rate of the channel is 2000 
+Q.36      Suppose  we  are  transmitting  frames  between  two  nodes  using  Stop -and-Wait 
+ 
+Q.36 – Q.65 Carry TWO marks Each 
+Computer Science and Information Technology (CS2) 
+----------------Page (26) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 28 of 48 
+                                                           
+               
+(D)         MSTs need not remain MSTs, and SPs need not remain SPs. 
+(C)         Every MST remains an MST, and SPs need not remain SPs. 
+(B)         MSTs need not remain MSTs, and every SP remains an SP. 
+(A)         Every MST remains an MST, and every SP remains an SP. 
+               
+trees (MSTs) and shortest paths (SPs) in 퐺 before and after the edge weight update? 
+Which  ONE  of  the  following  statements is  TRUE about  the  minimum  spanning 
+positive constant 훼 is added to the weight of every edge. 
+Q.37      Let 퐺 be an edge-weighted undirected graph with positive edge weights. Suppose a 
+Computer Science and Information Technology (CS2) 
+----------------Page (27) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 29 of 48 
+                                                           
+               
+(D)         P: Θ(1),  Q: Θ(푛),  R: Θ(푛log푛) 
+(C)         P: Θ(푛),  Q: Θ(푛log푛),  R: Θ(푛2) 
+(B)         P: Θ(1),  Q: Θ(푛log푛),  R: Θ(푛) 
+(A)         P: Θ(1),  Q: Θ(푛),  R: Θ(푛) 
+               
+meld operation on instances of size  푛 of these data structures? 
+Which  ONE  of  the following  options  gives  the  worst-case  time  complexities  for 
+R: Binary Search Tree. 
+Q: Min-heap implemented using an array.  
+     of the list. 
+P:  Unsorted  doubly  linked  list  with  pointers  to  the  head  node  and  tail  node  
+instance of the same data structure. Consider the following data structures:  
+Q.38      A meld operation on two instances of a data structure combines them into one single 
+Computer Science and Information Technology (CS2) 
+----------------Page (28) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 30 of 48 
+(D)         퐺 is LALR(1), also SLR(1) 
+(C)         퐺 is LALR(1), not SLR(1) 
+(B)         퐺 is CLR(1), not LALR(1) 
+(A)         퐺 is neither LALR(1) nor SLR(1) 
+               
+Which ONE of the following statements is TRUE?   
+퐴 →  푑 
+푆 →  퐴푎 | 푏퐴푐 | 푑푐 | 푏푑푎 
+Q.40      Given a Context-Free Grammar 퐺 as follows: 
+               
+(D)         128 KB and 6 KB 
+(C)         64 KB and 8 KB 
+(B)         128 KB and 16 KB 
+(A)         64 KB and 4 KB 
+               
+memory and the cache memory in this system (by te addressable), respectively? 
+Which  ONE  of  the  following  is  the  CORRECT  option  for  the  sizes  of  the  main 
+there is no other information stored for each cache block.  
+index into  a  cache  block.  The  size  of  each  cache  block is  one  byte. Assume that 
+Q.39      For a direct -mapped cache, 4 bits are used for the tag field and 12 bits are used to 
+Computer Science and Information Technology (CS2) 
+----------------Page (29) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 31 of 48 
+(D)         ≼ is an equivalence relation 
+(C)         (ℱ,≼ ) is a lattice 
+(B)         (ℱ,≼ ) is a partial order 
+(A)         ≼ is a symmetric relation 
+               
+Which of the following statement(s) is/are TRUE? 
+∀푓,푔∈ℱ,   푓≼푔 if and only if ∀푥∈{1,...,푛},푓(푥)≤푔(푥),  where 0≤1. 
+the binary relation ≼ on  ℱ  as follows: 
+Q.42      Let    ℱ  be   the   set   of   all   functions   from {1,...,푛} to {0,1}. Define  
+               
+(D)         Θ(log푛)  
+(C)         Θ(log2푛)  
+(B)         Θ(1)  
+(A)         Θ(푛)  
+               
+a bitonic array 퐴? 
+worst-case number of comparisons by an algorithm that searches for an element in 
+Which ONE of the following represents the best possible asymptotic bound for the 
+is sorted in the non-increasing order.  
+1≤ 푖≤ 푛 such that 퐴[1..푖] is sorted in the non-decreasing order and 퐴[푖+1 ..푛] 
+Q.41      An array 퐴 of length 푛 with distinct elements is said to be bitonic if there is an index 
+Computer Science and Information Technology (CS2) 
+----------------Page (30) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 32 of 48 
+                                                           
+               
+(D)         푥̅푧̅+푥푧  
+(C)         푤̅푥̅푦̅푧̅+푤푥̅푦̅푧̅+푤푥̅푦̅푧+푥푧  
+(B)         푤̅푥̅푦̅푧̅+푤̅푥̅푦푧̅+푤푥̅푦푧+푥푧  
+(A)         푤̅푥̅푦̅푧̅+푤푥̅푦̅푧̅+푤̅푥̅푦푧̅+푤푥̅푦푧̅+푥푧   
+                                                                                 
+Which one or more of the following Boolean expression (s) represent(s) 퐹? 
+ 
+Q.43      Given the following Karnaugh Map for a Boolean function  퐹(푤,푥,푦,푧): 
+Computer Science and Information Technology (CS2) 
+----------------Page (31) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 33 of 48 
+                                                           
+               
+(D)         If 푃 is symmetric, then both  퐿 and 푈 are symmetric. 
+(C)         If 푃 is singular, then at least one of the diagonal elements of  푈 is zero. 
+(B)         If 푃 is invertible, then both  퐿 and 푈 are invertible. 
+(A)         The system 푃푋=푄 can be solved by first solving 퐿푌=푄 and then 푈푋 =푌. 
+               
+Which of the following statement(s) is/are TRUE? 
+31  32                  33
+푙  푙  1     0 0 푢
+21                 22  23
+퐿=[푙  1 0] and  푈 =[0 푢  푢 ]. 
+11  12  13
+1 0 0     푢  푢  푢
+Suppose 푃 has an LU decomposition, 푃=퐿푈, where  
+Q.44      Consider  a  system  of  linear  equations 푃푋=푄  where  푃∈ℝ3×3  and  Q ∈ℝ3×1. 
+Computer Science and Information Technology (CS2) 
+----------------Page (32) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 34 of 48 
+                                                           
+               
+ 
+(D)         Keep a Min-Heap in which the key values of the records in the stack are maintained. 
+maintained in sorted order.  
+(C)         Keep  an  auxiliary  array  in  which  the  key  values  of  the  records  in  the  stack  are 
+(B)         Keep a pointer to the  record with the smallest key in the stack.  
+below it. 
+(A)         Keep with every record in the stack  , a pointer to the record with the smallest key 
+               
+Which one or more of the following approach(es) can achieve it? 
+2)  without increasing the complexities of the standard stack operations.  
+1)  without deleting the corresponding record, and   
+returns a pointer to the record with smallest key present in the stack   
+We wish to augment the stack data structure with an 푂(1) time MIN operation that 
+distinct. 
+that each record pushed in the stack has a positive integer key and that all keys are 
+Q.45      Consider a stack data structure into which we can PUSH and POP records. Assume 
+Computer Science and Information Technology (CS2) 
+----------------Page (33) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 35 of 48 
+                                                           
+               
+(D)         R2 is NOT in 3NF 
+(C)         R1 is NOT in 3NF 
+(B)         R2 is in 3NF 
+(A)         R1 is in 3NF 
+               
+Which of the following statement (s) is/are TRUE? 
+R2(A, B, C, D):  { 퐴→ 퐷,퐴→ 퐵,퐶→ 퐴} 
+R1(A, B, C, D, E): { 퐷 → 퐸,퐸퐴→ 퐵,퐸퐵→ 퐶} 
+that hold on them. 
+Q.46      Consider the following relational schema along with all the functional dependencies 
+Computer Science and Information Technology (CS2) 
+----------------Page (34) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 36 of 48 
+                                                           
+               
+(D)         Optimal page replacement policy 
+(C)         Most Frequently Used page replacement policy 
+(B)         Least Frequently Used page replacement policy 
+(A)         Least Recently Used page replacement policy 
+               
+in use? 
+Which one or more of the following could be the page replacement policy /policies 
+The *-marked references cause page replacements.  
+-           -      -      3      3      5     5    5     5     5    5     5      3      3 
+-           -      2      2      4      4     4    4     4     4    4     1      1      1 
+-          1      1      1      1      1     1    1     6     6    6     6      6      2 
+-         1*    2*    3*    4*    5*    4    1    6*    4    5    1*    3*    2* 
+initially                                            after 
+initially and after each reference (from left to right): 
+reference string: 1 2 3 4 5 4 1 6 4 5 1 3 2. The contents  of the frames are as follows 
+Q.47      Consider  a  demand  paging  system  with  three  frames,  and  the  following  page 
+Computer Science and Information Technology (CS2) 
+----------------Page (35) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 37 of 48 
+                                                           
+               
+1   4
+(D)         Aborting 푃 and 푃 makes the system deadlock free. 
+2
+(C)         Aborting 푃  makes the system deadlock free. 
+3
+(B)         Aborting 푃  makes the system deadlock free. 
+1
+(A)         Aborting 푃 makes the system deadlock free. 
+               
+Which of the following statement(s) is/are CORRECT?   
+  
+1   2          1              2
+푃  → 푅    means process 푃  is waiting for resource  푅  , and so on for others) 
+1  2 2  3  3  1  2  4  4  2
+Claim  edges: 푃 → 푅 ,  푃 → 푅 ,   푃 → 푅 ,   푃 → 푅 ,   푃 → 푅   (the  claim  edge 
+ 
+1  1          1             1
+푅 → 푃 means resource 푅  is assigned to process 푃 , and so on for others) 
+1  1  2  2  3  3  4  4
+Assignment  edges: 푅 → 푃,   푅 → 푃 ,   푅 → 푃 ,   푅 → 푃  (the  assignment  edge 
+ 
+The resource allocation graph has the following assignment and claim edges.  
+ 
+system. 
+1 2 3 4
+푅={푅 ,푅 ,푅 ,푅 } consists of single instances of distinct types of resources in the 
+1 2 3 4
+푃={푃,푃 ,푃 ,푃} consists of all active processes in an operating system.   
+Q.48 
+ 
+Computer Science and Information Technology (CS2) 
+----------------Page (36) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 38 of 48 
+                                                           
+               
+(퐴 + 퐵 + 퐷) (퐶 +퐷) (퐴 + 퐶 +퐷 ) (퐴 + 퐵 + 퐷) = 퐴 퐷 + 퐶 퐷   
+(D)         ̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅  ̅   ̅̅
+(C)         (퐴 + 퐶) (퐴̅ +퐵) = 퐴 퐵 + 퐴̅ 퐶  
+(B)         퐴 퐵 +퐴̅ 퐶 +퐵 퐶 = 퐴 퐵 + 퐴̅ 퐶  
+(A)         퐴̅ 퐵 퐶 +퐴 퐵̅ 퐶̅+ 퐴̅ 퐵̅ 퐶̅ +퐴 퐵̅ 퐶 + 퐴 퐵 퐶 = 퐵 퐶 + 퐵̅ 퐶̅ + 퐴̅ 퐵̅  
+               
+Q.50      Which of the following Boolean algebra ic equation(s) is/are CORRECT? 
+               
+(D)         푋+푌+푍 = 0  
+(C)         4푋 + 3푍 = 0  
+(B)         2푌 – 푍 = 0  
+(A)         4(푋+푌) + 푍 = 0  
+               
+Which of the following option(s) is/are CORRECT? 
+X                                            Y                                                      Z
+R   = 0xC1100000, R   = 0x40C00000, and R   = 0x41400000 
+hexadecimal: 
+Z
+R  ,   respectively   in   IEEE   754   single   precision   format   as   given   below   in 
+X       Y
+Q.49      Three floating point numbers  푋,푌, and 푍 are stored in three registers R   , R  , and 
+Computer Science and Information Technology (CS2) 
+----------------Page (37) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 39 of 48 
+                                                           
+               
+1   2
+(D)         퐺  and 퐺  are ambiguous. 
+1   2
+(C)         퐺  and 퐺  are not 퐿퐿(1). 
+1        2
+(B)         퐺  is 퐿퐿(1) and 퐺  is not 퐿퐿(1). 
+1          2
+(A)         퐺  is not 퐿퐿(1) and 퐺  is 퐿퐿(1). 
+               
+Which of the following option(s) is/are CORRECT? 
+where 푖푓,푡ℎ푒푛,푒푙푠푒,푎,푏,푐 are the terminals. 
+       퐸→ 푏 
+      푀 → 푖푓 퐸 푡ℎ푒푛 푀 푒푙푠푒 푆 | 푐 
+2
+퐺 :푆→ 푖푓 퐸 푡ℎ푒푛 푆 | 푀 
+       퐸→ 푏 
+1
+퐺 : 푆→ 푖푓  퐸 푡ℎ푒푛  푆 | 푖푓 퐸 푡ℎ푒푛 푆 푒푙푠푒 푆 | 푎  
+1   2
+Q.51      Consider two grammars 퐺  and 퐺  with the production rules given below:  
+Computer Science and Information Technology (CS2) 
+----------------Page (38) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 40 of 48 
+                                                           
+               
+푎              푎     푏
+(D)         {푤 | 푤 ∈{푎,푏}∗,#(푤)≡ 2 (mod 7),and #(푤)=#(푤)}  
+푎              푏
+(C)         {푤 | 푤 ∈{푎,푏}∗,#(푤)≡ 2 (mod 7),and #(푤)≡ 3 (mod 9)} 
+(B)         {푎,푏}∗∩{푎푚 푏푛푐푚−푛 | 푚 ≥ 푛≥ 0} 
+(A)         {푎푚 푏푛 | 푚,푛≥  0} 
+               
+Which one or more of the following option(s) define(s) regular language(s)? 
+occurrences of 훼 in 푥. 
+훼
+Q.52      Let Σ={푎,푏,푐}.  For 푥∈Σ∗, and 훼∈Σ, let  #(푥) denote the number of 
+Computer Science and Information Technology (CS2) 
+----------------Page (39) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 41 of 48 
+                                                           
+               
+(D)      W2(X), R1(X), W1(Y), W2(Y), R1(X), COMMIT(T2), W1(X), COMMIT(T1) 
+(C)      R1(X), W1(Y), W2(X), W2(Y), R1(X), W1(X), COMMIT(T1), COMMIT(T2) 
+(B)      W2(X), R1(X), W2(Y), W1(Y), R1(X), COMMIT(T2), W1(X), COMMIT(T1) 
+(A)      R1(X), W2(X), W1(Y), W2(Y), R1(X), W1(X), COMMIT(T2), COMMIT(T1) 
+          
+COMMIT(T1) 
+W1(X) 
+COMMIT(T2) 
+R1(X) 
+W2(Y) 
+W1(Y) 
+W2(X) 
+R1(X) 
+Transaction T2 
+                              Transaction T1 
+the schedule(s) is/are conflict serializable? 
+Q.53      Consider the database transactions T1 and T2,  and data items X and Y. Which of 
+Computer Science and Information Technology (CS2) 
+----------------Page (40) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 42 of 48 
+                                                           
+ 
+WHERE E.courseno = 1470; 
+FROM Students S NATURAL JOIN Enrolled E 
+(D)         SELECT S.name  
+ 
+ 
+                      AND E.rollno = S.rollno); 
+            WHERE E.courseno = 1470  
+            FROM Enrolled E 
+WHERE  0 < (SELECT COUNT(*)  
+FROM Students S 
+(C)         SELECT S.name  
+ 
+ 
+                      AND E.rollno = S.rollno) > 0; 
+              WHERE E.courseno = 1470  
+WHERE SIZEOF (SELECT * FROM Enrolled E 
+FROM Students S 
+(B)         SELECT S.name  
+ 
+ 
+                      AND E.rollno = S.rollno); 
+              WHERE E.courseno = 1470  
+WHERE EXISTS (SELECT * FROM Enrolled E  
+FROM Students S 
+(A)         SELECT S.name  
+ 
+               
+names of the students enrolled in  course number (i.e., courseno) 1470? 
+Which  of  the  following options  is/are  correct SQL  query/queries  to  retrieve  the 
+   Enrolled (rollno: integer, courseno: integer, grade: string) 
+   Courses (courseno: integer, cname: string, credits: integer) 
+   Students (rollno: integer, name: string, age: integer, cgpa: real) 
+Q.54      Consider the following relational schema: 
+Computer Science and Information Technology (CS2) 
+----------------Page (41) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 43 of 48 
+                                                           
+(Answer in integer) 
+The smallest key value in the parent of the leaf that contains 25*     is __________. 
+A record with key value 23 is inserted into the B +- tree. 
+its parent. 
+1 2
+in [푘 ,푘 ), and that when a leaf is created, the smallest key in it is    copied up into 
+1   2
+Assume that a pointer between keys  푘  and 푘  points to a subtree containing keys 
+The *-marked keys signify that these are data entries in a leaf.    
+A = (49, 77, 83, -), B = (7, 19, 33, 44), C = (20*, 22*, 25*, 26*) 
+consists of the following nodes: 
+Q.57      In a B+- tree where each node can hold at most four key values, a root to leaf path 
+               
+two decimal places) 
+taken to process 1000 instructions in microseconds is __________ . (rounded off to 
+Q.56      Assume that there are no pipeline stalls due to branches and other hazards. The time 
+respectively, in nanoseconds. The delay of an inter  -stage latch is 10 nanoseconds. 
+              A  5-stage  instruction  pipeline  has  stage delays  of  180,  250,  150,  170,  and  250, 
+               
+___________ . (rounded off to one decimal place) 
+Then   the   average   memory   access   time   in   this   system   in   nanoseconds   is 
+penalty” for the data to be transferred from main memory to L2 cache is 100 ns.  
+penalty” for transferring data from L2 cache to L1 cache is 10 ns. The “miss 
+Whereas, for the second level (L2) cache, the “hit rate” is 80% and the “miss 
+rate” for L1 cache is 90% while the processor is accessing the data from L1 cache. 
+memory. The first level (L1) cache access time is 1    nanosecond ( ns) and the “hit 
+Q.55      Given  a  computing  system  with  two  levels  of  cache  (L1  and  L2)  and  a  main 
+Computer Science and Information Technology (CS2) 
+----------------Page (42) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 44 of 48 
+                                                           
+               
+               
+___________. (Answer in integer)  
+The   output   of  someAlgo(푇)   for   the   tree   shown   in   the given   figure  is 
+3. Output the distance between 푢 and 푧 in 퐺. 
+given by the BFS. 
+Let 푧 be the vertex at maximum distance from 푢 as 
+2. Run BFS on 퐺 again with 푢 as the starting vertex. 
+푣 as given by the BFS. 
+푣. Let 푢 be a vertex in 퐺 at maximum distance from 
+1. Let 푣 be any vertex in 퐺. Run BFS on 퐺 starting at 
+ someAlgo(퐺) 
+input. 
+Q.59      Consider the following algorithm  someAlgo that takes an undirected graph 퐺 as 
+               
+The value of 푏 is ___________ . (Answer in integer) 
+eight bytes. All the pages in the system have the same size.   
+table, and an offset within the desired page. Each entry of the inner page table uses 
+a  푏-bit  index to  the  outer  page  table,  an  offset  within  the page  of  the inner  page 
+hierarchical paging with a page size of 4096 bytes. A logical address is divided into 
+Q.58      A computer system supports a logical address space of 232 bytes. It uses two-level 
+Computer Science and Information Technology (CS2) 
+----------------Page (43) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 45 of 48 
+                                                           
+               
+ 
+                                                                                                       
+Arithmetic                                     3                                     1.30 ×108 
+Store                                              4                                     1.65 ×108 
+Load                                              5                                     1.20 ×108 
+Branch                                           2                                     2.25 ×108 
+instruction (CPI)                           executed 
+Instruction type       Clock cycles required per         Number of instructions 
+of a clock cycle in nanoseconds is _________ . (rounded off to one decimal place)  
+four types of instructions, the details of which are given in the table. The duration 
+Q.61      An application executes 6.4×108 number of instructions in 6.3 seconds. There are 
+               
+integer) 
+The number of states in a minimum state DFA for    퐿 is ___________. (Answer in 
+ Define   퐿={푥∈Σ∗ | 푝푟표푑(푥)=2}. 
+For example, 푝푟표푑(124)=(1×2×4) mod 7=1.  
+ 푥 modulo 7. We take 푝푟표푑(휖)=1, where 휖 is the null string.  
+Q.60      Let  Σ={1,2,3,4}.  For 푥∈Σ∗, let 푝푟표푑(푥) be   the   product   of   symbols  in 
+Computer Science and Information Technology (CS2) 
+----------------Page (44) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 46 of 48 
+                                                           
+               
+The output of the above program is ___________. (Answer in integer) 
+} 
+return 0; 
+printf("%d", a + (*ptr) + arr[1]); 
+ptr++; 
+(*ptr)++; 
+a = *ptr; 
+ptr = &arr[0] + 1; 
+int *ptr; 
+int arr[5] = {30,50,10}; 
+int a; 
+int main(){  
+#include <stdio.h> 
+Q.62      Consider the following C program: 
+Computer Science and Information Technology (CS2) 
+----------------Page (45) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 47 of 48 
+                                                           
+               
+(rounded off to one decimal place) 
+The probability that the roots of the chosen polynomial   are equal is __________.  
+square invariant quadratic polynomials we choose one at random. 
+invariant  if  (푥−  훼)(푥− 훽)=(푥− 훼2)(푥− 훽2).  Suppose  from  the  set  of  all 
+Q.64      A quadratic polynomial (푥−  훼)(푥− 훽) over complex numbers is said to be square 
+               
+The output of the given C program is ________. (Answer in integer) 
+} 
+    return 0; 
+    printf ("%d", sum); 
+        sum += g(f(n)); 
+    for (n=1; n<3; n++) 
+    sum=0; 
+    int sum, n; 
+int main() { 
+ 
+} 
+    return g(n*2); 
+int f(int n) { 
+ 
+} 
+    return (n+10); 
+int g(int n) { 
+ 
+#include <stdio.h> 
+ 
+Consider the following C program: 
+Q.63 
+ 
+Computer Science and Information Technology (CS2) 
+----------------Page (46) Break----------------
+ 
+Organising Institute: IIT Roorkee                        Page 48 of 48 
+ 
+               
+off to two decimal places) 
+The expected length of the subinterval that contains 0.4 is ___________. (rounded 
+in ℝ into two disjoint subintervals. 
+Q.65      The unit interval (0,1) is divided at a point chosen uniformly distributed over (0,1) 
+Computer Science and Information Technology (CS2) 
+----------------Page (47) Break----------------
